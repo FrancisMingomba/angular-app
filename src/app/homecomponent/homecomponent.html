@@ -1,0 +1,226 @@
+    <!--div>
+    
+    <div><navbar></navbar></div>
+    <div><componentone></componentone></div>
+    <div class="h-30 d-inline-block"></div>
+    <div><componenttwo></componenttwo></div>
+    <div class="h-40 d-inline-block"></div>
+    <div><componenthree></componenthree></div>
+    <div><innercontainer></innercontainer></div>
+    <div><line></line></div>
+    <div><componentfour></componentfour></div>
+    <div class="h-10 d-inline-block"></div>
+    <div><componentfive></componentfive></div>
+    <div class="h-10 d-inline-block"></div>
+    <div><footercomponent></footercomponent></div>
+    
+    <router-outlet></router-outlet>
+</div-->
+        <!--p>Home</p-->
+
+<!--------------------------------------------------------------->
+<!--div class="text-center">
+  <div class="row">
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div-->
+
+<!--------------------------------------------------------------->
+
+<nav class=" navbar navbar-expand-lg bg-body-tertiary  border-secondary fixed-top  ">
+  <div class="container-fluid justify-content-center">
+    <a class="navbar-brand" href="#">NavbarXKS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+      <ul class="navbar-nav  mb-2 mb-lg-0 d-flex justify-content-lg-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/footer">Link</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/footer">Link</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/footer">Link</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/footer">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>  
+        <!--button class="btn btn-outline-success y" type="submit">Login</button-->
+        <div class="loginandlogoutspace"> </div>
+        <!--button class="btn btn-outline-success " type="submit">Signup</button--> 
+    </div>
+        <!--div>
+          <button class="btn btn-outline-success y " type="submit">Login</button>
+            <div class="loginandlogoutspace"> </div>
+            <button class="btn btn-outline-success " type="submit">Signup</button> 
+        </div-->
+  </div>
+
+</nav>
+<body>
+<div class="spacebetweenavbarandcomp1"></div>
+<div class="text-center fixed-top ">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+      
+    </div>
+    <div class="col loginandlogoutspace">
+       <button class="btn btn-light y" type="submit" routerLink="/footer">Log in</button>
+        <div class="loginandlogoutspace"> </div>
+        <button class="btn btn-light  " type="submit">Signup</button>
+    </div>
+  </div>
+</div>
+<!------------------------------------------------------------->
+<div class="compomentone">
+  
+    <div class="bg-secondary text-white sizeonee ">
+           
+                <div class="container ">
+                    <div class="row">
+                        <div class="col ">
+                            <img [src]="imagePath" class="card-img-top pt-3" alt="image">
+                        </div>
+                        <div class="col ">
+                            <p>ContentsT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+   
+<!----------------------------Componenttwo--------------------------------->
+<div class="px-4 text-center ">
+  <div class="row gx-5 ">
+    <div class="col">
+      <div class="p-4 b rounded"><p>Custom column padding</p></div>
+    </div>
+    <div class="col">
+      <div class="p-4 b rounded">Custom column padding</div>
+    </div>
+    <div class="col">
+      <div class="p-4 b rounded">Custom column padding</div>
+    </div>
+    <div class="col">
+      <div class="p-4 b rounded">Custom column padding</div>
+    </div>
+    <div class="col">
+      <div class="p-4 b rounded">Custom column padding</div>
+    </div>
+  </div>
+</div>
+<div class=" d-inline-block"></div>
+<!-----------------------Component3-------------------------------------->
+<div class="compomenthree">
+    <div class="bg-secondary text-white sizeone ">
+        <div class="container">
+            <div class="row">
+                <div class="col ">       
+                    <p>Contentssss</p>
+                </div>
+                <div class="col  ">
+                    <img [src]="imageUrl" class="card-img-top pt-3" alt="image">
+                </div>
+            </div>       
+            <!--hr-->
+        </div>
+    </div>
+</div>
+<!-----------------------Component4-------------------------------------->
+<div class=" y   text-center  ">
+  <div class="h-auto">
+    <h5>Messageyy</h5>
+  </div>
+</div>
+<!-----------------------Compnentfive-------------------------------------->
+  <div class="containere">
+        <div class="card" style="width: 18rem;">
+            <img [src]="imageSource" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+            <div class="card" style="width: 18rem;">
+                <img [src]="imageSource" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+            <div class="card" style="width: 18rem;">
+             <img [src]="imageSource" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+        </div>
+  </div>
+  <div class=" x"></div>
+<!--------------------------Componentsix----------------------------------->
+<div class="">
+<div class=" h-75">
+   <img [src]="imagepath" class="card-img-top " alt="image">
+</div>
+</div>
+<!-----------------------Footer-------------------------------------->
+  <div class=" x "></div>
+    <div class="bg-secondary text-white  compomenthre  ">
+     <p  class=" text-center">Follow Us</p>
+        <div class=" text-center">
+            <div class="row">
+                <div class="col text-center ">
+                    <p><a class="link-offset-2 link-underline link-underline-opacity-0 text-white" href="#">Underline opacity 0</a></p>
+                    <p><a class="link-offset-2 link-underline link-underline-opacity-0 text-white" href="#">Underline opacity 0</a></p>
+                </div>
+                <div class="col text-center ">
+                    <div>
+                         <p><a class="link-offset-2 link-underline link-underline-opacity-0 text-white" href="#">Underline opacity 0</a></p>
+                    </div>
+                   <div>
+                     <p><a class="link-offset-2 link-underline link-underline-opacity-0 text-white" href="#">Underline opacity 0</a></p>
+                   </div>
+                </div>
+                <div class="col text-center ">
+                   <div>
+                     <p><a class="link-offset-2 link-underline link-underline-opacity-0 text-white" href="#">Underline opacity 0</a></p>
+                  </div>
+                   <div>
+                     <p><a class="link-offset-2 link-underline link-underline-opacity-0 text-white" href="#">Underline opacity 0</a></p>
+                  </div>
+                </div>
+            </div>
+    </div>
+  </div>
+<router-outlet></router-outlet>
+  

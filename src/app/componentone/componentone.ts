@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'componentone',
+  imports: [],
+  templateUrl: './componentone.html',
+  styleUrl: './componentone.css'
+})
+export class Componentone {
+   // imageUrl = "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+  //imageUrl = "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+
+    imagePath: string = "images/picture1.png";
+
+}

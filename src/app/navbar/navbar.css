@@ -1,0 +1,12 @@
+.nav {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.nav__list {
+    width: 100%;
+}
+.x{
+    width: 50%; float:left; margin: 8px;
+}

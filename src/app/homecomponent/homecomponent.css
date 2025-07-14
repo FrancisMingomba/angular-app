@@ -1,0 +1,77 @@
+.sizeonee {
+    height: 350px;
+}
+
+.b:hover {
+   
+    box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px;
+    cursor: pointer;
+
+}
+
+.componentonesize {
+    height: 50px;
+}
+.compomenthree {
+    height: 400px;
+}
+.sizeone {
+    height: 350px;
+}
+.compomentone {
+    height: 400px;
+}
+
+
+.container {
+    display: grid;
+}
+.innercontainer {
+    display: flex;
+}
+
+.containere {
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    size: 100% 100%S;
+
+}
+
+.img {
+    size: 100% 100%S;
+}
+.container {
+    height: 20vh;
+}
+.containertwo{
+    height: 50hv;
+}
+.sizeone {
+  height: 350px;
+}
+
+.componentfourdivsize {
+    height: 40px;;
+}
+.x {
+    height: 25px;
+}
+.y {
+    height: 40px;
+}
+.t {
+    height: 2px;
+}
+.spacebetweenavbarandcomp1 {
+    height: 55px;
+}
+.navbarcolor {
+    background-color: #66abab;
+    height: 50px;
+}
+.loginandlogoutspace{
+    width: 50%; float:left; margin: 8px;
+}
