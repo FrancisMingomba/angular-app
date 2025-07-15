@@ -8,6 +8,7 @@ import { Homecomponent } from './homecomponent/homecomponent';
 import { Componentone } from './componentone/componentone';
 import { PageNotFound } from './page-not-found/page-not-found';
 import { Footercomponent } from './footercomponent/footercomponent';
+//import { LoginComponent } from './login.login';
 
 export const routes: Routes = [
     {path: '', redirectTo:'home', pathMatch: 'full'},

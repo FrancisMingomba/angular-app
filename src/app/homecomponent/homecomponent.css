@@ -75,3 +75,17 @@
 .loginandlogoutspace{
     width: 50%; float:left; margin: 8px;
 }
+.k{
+    display: flex;
+    justify-content: space-between;
+}
+.spacebetweenloginandlogout {
+    width: 20px;
+}
+.h {
+    height: 55px;
+}
+.link {
+      color: #FFFFFF;
+  text-decoration: none;
+}
