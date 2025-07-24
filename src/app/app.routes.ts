@@ -10,6 +10,8 @@ import { Logincomponent } from './logincomponent/logincomponent';
 import { Signupcomponent } from './signupcomponent/signupcomponent';
 import { Registercomponent } from './registercomponent/registercomponent';
 import { ChangePassword } from './change-password/change-password';
+import { Postcomponent } from './postcomponent/postcomponent';
+
 
 
 export const routes: Routes = [
@@ -17,10 +19,11 @@ export const routes: Routes = [
     {path: 'home' , component:Homecomponent},
     {path: 'register' , component:Registercomponent},
     {path: 'login' , component:Logincomponent},
-     {path: 'changepassword' , component:ChangePassword},
+    {path: 'changepassword' , component:ChangePassword},
     {path: 'signup' , component:Signupcomponent},
     {path: 'componenttwo' , component:Componenttwo},
     {path: 'footer' , component:Footercomponent},
+     {path: 'post' , component:Postcomponent},
     {path: '**' , component:PageNotFound}
   
 

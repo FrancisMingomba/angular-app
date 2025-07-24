@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,ReactiveFormsModule, FormControlOptions } from '@angular/forms';
 import { PasswordValidators } from './password.validators';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'change-password',
-  imports: [ReactiveFormsModule, CommonModule, ],
+  imports: [ReactiveFormsModule, CommonModule, RouterLink ],
   templateUrl: './change-password.html',
   styleUrl: './change-password.css'
 })
