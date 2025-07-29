@@ -21,12 +21,9 @@ export class Postcomponent implements OnInit {
 
  constructor(private service: PostService) { }
   ngOnInit(): void {
-   this.service.getPosts()
+   this.service.getAll()
     .subscribe(response => {
       this.posts = response as any[];
-    },error => {
-      alert('An unexpected error occurred Francis.');
-      console.error('Error fetching posts:', error);
     });
   }
 
@@ -34,7 +31,7 @@ createPost(input: HTMLInputElement) {
     let post: { title: string; id?: number } = { title: input.value };
     //let post = { title: input.value };
     input.value = '';
-  this.service.createPost(post) 
+  this.service.create(post) 
     .subscribe(response => {
       post.id = response.id;
       this.posts.splice(0, 0, post);
@@ -42,26 +39,21 @@ createPost(input: HTMLInputElement) {
       if (error instanceof BadInput ) {
        // this.form.setErrosrs();
       }
-       else {
-          alert('An unexpected error occurred Francis.');
-          console.error('Error fetching posts:', error);
-      }
+       else throw error;
+         
+      
       
     });
   }
 
   updatePost(post: { id: number; title: string }) {
-   this.service.updatePost(post)  
+   this.service.update(post)  
     .subscribe(response => {
-    }, (error: Response )=> {
-      if (error.status === 400)
-      alert('An unexpected error occurred Francis.');
-      console.error('Error updating post:', error);
     });
   }
 
   deletePost(post: { id: number }) {
-     this.service.deletePost(345)
+     this.service.delete(345)
     .subscribe(response => {
       let index = this.posts.indexOf(post);
       this.posts.splice(index, 1);
@@ -70,9 +62,7 @@ createPost(input: HTMLInputElement) {
       if (error instanceof NotFoundError) {
         alert('This post has already been deleted.');
       }
-      else
-      alert('An unexpected error occurred Francis.');
-      console.error('Error deleting post:', error);
+      else throw error;
     })
     ;
   }
