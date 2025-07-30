@@ -6,6 +6,7 @@ import { AppError } from '../common/app-error';
 import { throwError } from 'rxjs';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +14,9 @@ export class DataService {
   constructor(@Inject(String) private url: string, private http: HttpClient) { }
 
   getAll() {
+    
      return this.http.get(this.url);
+     
   } 
 
   create(resource: any) {
