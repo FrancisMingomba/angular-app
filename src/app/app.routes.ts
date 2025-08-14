@@ -11,6 +11,8 @@ import { Signupcomponent } from './signupcomponent/signupcomponent';
 import { Registercomponent } from './registercomponent/registercomponent';
 import { ChangePassword } from './change-password/change-password';
 import { Postcomponent } from './postcomponent/postcomponent';
+import { Usernamepasswordreset } from './usernamepasswordreset/usernamepasswordreset';
+
 
 
 
@@ -23,7 +25,8 @@ export const routes: Routes = [
     {path: 'signup' , component:Signupcomponent},
     {path: 'componenttwo' , component:Componenttwo},
     {path: 'footer' , component:Footercomponent},
-     {path: 'post' , component:Postcomponent},
+    {path: 'post' , component:Postcomponent},
+    {path: 'reset' , component:Usernamepasswordreset},
     {path: '**' , component:PageNotFound}
   
 
