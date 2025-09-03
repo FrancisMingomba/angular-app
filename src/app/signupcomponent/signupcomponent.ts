@@ -1,24 +1,36 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormControlOptions, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { PasswordValidators } from 'app/change-password/password.validators';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'signupcomponent',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterOutlet],
   templateUrl: './signupcomponent.html',
   styleUrl: './signupcomponent.css'
 })
 export class Signupcomponent {
    
-    form = new FormGroup({
-      username: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required)
-  
-    });
+ form: FormGroup;
 
-    get username() {
-      return this.form.get('username');
-    }
+   constructor(fb: FormBuilder) {
+     this.form = fb.group({
+       emali: ['',
+           Validators.required,
+           Validators.email
+         ],
+       password: ['',  Validators.required],
+       confirmPassword: ['',  Validators.required]
+     }, {
+       validator: PasswordValidators.passwordsShouldMatch} as FormControlOptions);
+ 
+   }
+ 
+   get oldPassword() { return this.form.get('oldPassword'); }
+   get newPassword() { return this.form.get('newPassword'); }
+   get confirmPassword() { return this.form.get('confirmPassword'); }   
+
 
 }
 

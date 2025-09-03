@@ -12,6 +12,7 @@ import { Registercomponent } from './registercomponent/registercomponent';
 import { ChangePassword } from './change-password/change-password';
 import { Postcomponent } from './postcomponent/postcomponent';
 import { Usernamepasswordreset } from './usernamepasswordreset/usernamepasswordreset';
+import { Register } from './register/register';
 
 
 
@@ -19,7 +20,7 @@ import { Usernamepasswordreset } from './usernamepasswordreset/usernamepasswordr
 export const routes: Routes = [
     {path: '', redirectTo:'home', pathMatch: 'full'},
     {path: 'home' , component:Homecomponent},
-    {path: 'register' , component:Registercomponent},
+  
     {path: 'login' , component:Logincomponent},
     {path: 'changepassword' , component:ChangePassword},
     {path: 'signup' , component:Signupcomponent},
@@ -27,6 +28,7 @@ export const routes: Routes = [
     {path: 'footer' , component:Footercomponent},
     {path: 'post' , component:Postcomponent},
     {path: 'reset' , component:Usernamepasswordreset},
+     {path: 'reg' , component:Register},
     {path: '**' , component:PageNotFound}
   
 

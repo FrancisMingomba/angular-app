@@ -1,0 +1,94 @@
+<div class=" w-100 border border-secondary text-center topdiv">
+   <div class="row fixed-top  bg-black text-white  h">
+            <div class="container text-center ">
+              <div class="row">
+                  <div class="col  mx-auto m-3 link">
+                     <div  class="col link" ><a class=" link"  routerLink="/home"><h5>LOGO</h5></a></div>
+                  </div>
+          </div>
+      </div>
+</div>
+
+</div>
+
+  <div class="row colheight">
+    <div class="col d-flex align-items-center justify-content-center ">
+      <div class="fs-1 fw-bold">Register</div>
+    </div>
+    <div class="col ">
+        <div class=" right-div  bg-dark-subtle rounded border border-black b">
+           
+          <form  [formGroup]="registerForm" (ngSubmit)="onRegister()">
+               <div class="c  mx-auto h-auto">
+               <div >
+                    <label  for="name " >Name</label>
+                    <input 
+                    formControlName="name" 
+                    type="text" 
+                    class="form-control border border-black " 
+                    id="name"
+                    >
+                    @if(name.invalid && (name.dirty || name.touched)) {
+                         <p class="password-required" >Required</p>
+                    }
+               </div>
+
+               <div>
+                    <label  for="email " >email</label>
+                    <input 
+                    formControlName="email" 
+                    type="text" 
+                    class="form-control border border-black " id="email"
+                    >
+                      @if(email.invalid && (email.dirty || email.touched)) {
+                         <p class="password-required" >Required</p>
+                    }
+               </div>
+
+               <div >
+                    <label  for="password " >Password</label>
+                    <input 
+                    formControlName="password" 
+                    type="password" 
+                    class="form-control border border-black " 
+                    id="password">
+                      @if(password.invalid && (password.dirty || password.touched)) {
+                         <p class="password-required" >Required</p>
+                    }
+                    
+               </div>
+
+               <div class="mb-3 ">
+                    <label  for="confirmPassword " >Confirm Password</label>
+                    <input 
+                    formControlName="confirmPassword" 
+                    type="password" 
+                    class="form-control border border-black " 
+                    id="confirmPassword">
+                      @if(confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)) {
+                         <p class="password-required" >Required</p>
+                    }
+                    
+                         <div>
+                              @if(confirmPassword.value !== password.value){
+                              <p class="password-required">Password Missmatch</p> }
+                         </div>
+                  
+               </div>
+                  <div class="d-grid gap-2 col-6 mx-auto">
+                  <button class="btn btn-secondary border border-black" type="button" [disabled]>Submit</button>
+                  <p>Forgotten <a class="link-opacity-100-hover" routerLink="/reset">username</a> </p>
+               </div>
+
+               </div>
+               
+          </form>
+           
+      </div>
+    </div>
+  </div>
+
+
+
+
+

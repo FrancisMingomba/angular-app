@@ -18,18 +18,32 @@
     <div class="col ">
         <div class=" right-div  bg-dark-subtle rounded border border-black b">
             <div class="m-3 left-div-inner  ">
-                <form [formGroup]="form"  (ngSubmit)="login()">
+                <form>
                     <div *ngIf="form.errors" class="alert alert-danger">
                       The username or password is incorrect.
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control border border-black" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <input
+                       type="email" 
+                       class="form-control border border-black" 
+                       id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3 ">
                       <label  for="exampleInputPassword1 " class="form-label ">Password</label>
-                      <input type="password" class="form-control border border-black" id="exampleInputPassword1">
+                      <input
+                       type="password" 
+                       class="form-control border border-black" 
+                       id="exampleInputPassword1">
                     </div>
+                          <div class="mb-3 ">
+                      <label  for="exampleInputPassword1 " class="form-label ">Confirm Passwordrrrrr</label>
+                      <input
+                       type="password" 
+                       class="form-control border border-black" 
+                       id="exampleInputPassword1">
+                    </div>
+                    
                     <div class="d-grid gap-2 col-6 mx-auto">
                   <button class="btn btn-primary border border-black" type="submit">Button</button>
                 </div>

@@ -1,0 +1,9 @@
+<input
+     (keyup.enter)="createUser(title)" #title
+     type="text" class="form-control">
+<ul class="list-group">
+    *ngFor="let post of posts"
+    <li class="list-group-item">
+    {{post.email}}
+    </li>
+</ul>

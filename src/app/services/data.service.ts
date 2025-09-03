@@ -32,6 +32,10 @@ export class DataService {
     
      }
 
+     registerUser(resource:any) {
+         return this.http.post(this.url, JSON.stringify(resource));
+     }
+
     private handleError() {
       pipe(
           catchError((error: Response) => {

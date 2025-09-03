@@ -10,10 +10,10 @@ export class PostService extends DataService{
 
    // private url = 'https://jsonplaceholder.typicode.com/posts';
   constructor( http: HttpClient) {
-      super('https://jsonplaceholder.typicode.com/posts', http);
+      super('https://angularbackend-production.up.railway.app/users', http);
    }
 
-   
+  
 
    }
 

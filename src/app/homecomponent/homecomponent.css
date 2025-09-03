@@ -1,6 +1,11 @@
 .sizeonee {
-    height: 350px;
+    height: 420px;
 }
+
+.compomentone {
+    height: 500px;
+}
+
 
 .b:hover {
    
@@ -13,15 +18,11 @@
     height: 50px;
 }
 .compomenthree {
-    height: 400px;
+    height: 500px;
 }
 .sizeone {
-    height: 350px;
+    height: 450px;
 }
-.compomentone {
-    height: 400px;
-}
-
 
 .container {
     display: grid;
@@ -40,9 +41,7 @@
 
 }
 
-.img {
-    size: 100% 100%;
-}
+
 .container {
     height: 20vh;
 }
