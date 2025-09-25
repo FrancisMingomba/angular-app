@@ -43,7 +43,7 @@
 
 
 .container {
-    height: 20vh;
+    height: 40vh;
 }
 .containertwo{
     height: 50hv;
@@ -141,7 +141,5 @@
 
 .in-progress {
     color: crimson;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
+   
 }

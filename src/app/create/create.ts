@@ -1,3 +1,4 @@
+import { AuthService } from 'app/services/auth-service';
 import { Userservice } from 'app/services/userservice';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -18,7 +19,8 @@ export class Create {
 
     form: FormGroup;
   
-  constructor(fb: FormBuilder) {
+  
+  constructor(fb: FormBuilder, private AuthService: AuthService, private router: Router) {
     this.form = fb.group({
       name: ['', Validators.required],
       email: ['',  [Validators.required, Validators.email]],
@@ -36,22 +38,20 @@ export class Create {
     get confirmPassword() { return this.form.controls['confirmPassword'];}
   
 
-  signupUser: any[] = [];
-  signupObj:any = {
-    name: "",
-    email: "",
-    password: ""
-  };
+  
 
   onSignup(){
+    this.AuthService.register(this.form.value).subscribe(res=>{
+      alert('User Registered Successfully');
+      this.router.navigate(['/signin']);
+    },
+    err=>{
+      alert('Something went wrong');
+    }
+    );
     debugger
-    this.signupUser.push(this.signupObj)
-    localStorage.setItem('signupUser', JSON.stringify(this.signupUser));
-    this.signupObj = {
-       name: "",
-       email: "",
-       password: ""
-    };
+
+    
   }
 
 

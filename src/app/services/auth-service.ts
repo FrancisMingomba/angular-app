@@ -6,8 +6,8 @@ import { User } from '../interface/auth';
   providedIn: 'root'
 })
 export class AuthService {
- // private baseUrl = 'https://angularbackend-production.up.railway.app/users';
-  private baseUrl = 'http://localhost:9090/users/register';
+  private baseUrl = 'https://angularbackend-production.up.railway.app/users/register';
+  //private baseUrl = 'http://localhost:9090/users/register';
   constructor(private http: HttpClient) { }
 
   registerUser(postData: User) {
@@ -20,5 +20,8 @@ export class AuthService {
 
   Proceedregister(inputdata: any){
     return this.http.post(this.baseUrl, inputdata);
+  }
+  register(user: any) {
+    return this.http.post(`{this.baseUrl/register}`, user);
   }
 }
