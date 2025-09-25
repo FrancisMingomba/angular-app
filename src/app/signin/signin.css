@@ -40,6 +40,11 @@
     margin-top: 0.1rem !important;
 
 }
+.forgottenpassword{
+    color: blue;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
 
 
 

@@ -1,3 +1,138 @@
+<div class="container">
+
+
+  <div class="row fixed-top  bg-black text-white h">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col  mx-auto m-3">
+          <div class="col link"><a class=" link" routerLink="/home">
+              <h4>LOGO</h4>
+            </a></div>
+        </div>
+        <div class="col-6">
+          <div class="container text-center">
+            <div class="row row-cols-auto  mx-auto m-3">
+              <div class="col link"><a class=" link" routerLink="/home">Home</a></div>
+              <!--div class="col link" ><a class=" link"  routerLink="/reset">Reset</a></div-->
+              <div class="col link"><a class=" link" routerLink="/inprogress">Demo</a></div>
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="col"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-end ">
+          <ul class="list-group list-group-horizontal  d-flex justify-content-end  m-3  mx-auto div">
+            <div class="col link"><a class=" link" routerLink="/signin">Log in</a></div>
+            <div class="spacebetweenloginandlogout"></div>
+            <div class="col link"><a class=" link" routerLink="/register">Sign up</a></div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row vh-50 right-div">
+    <div class="rounded-4 border-0 shadow-lg bg-white ">
+      <div class="mb-4 h2 text-success">
+        Sign Up
+      </div>
+      <form [formGroup]="form" (ngSubmit)="proceedregister()">
+
+        <div class="mb-3">
+          <input type="text" id="name" class="form-control bg-body-secondary" placeholder="Name"
+            formControlName="name" />
+          @if (name.invalid && (name.dirty || name.touched)) {
+          <p class="rerror-fedback">Name is required</p>
+          }
+        </div>
+        <div class="mb-3">
+          <input type="text" id="email" class="form-control bg-body-secondary" placeholder="Email"
+            formControlName="email" />
+          @if (email.invalid && (email.dirty || email.touched)) {
+          <p class="rerror-fedback">Email is required</p>
+          }
+        </div>
+        <div class="mb-3">
+          <input type="password" id="password" class="form-control bg-body-secondary" placeholder="Password"
+            formControlName="password" />
+          @if (password.invalid && (password.dirty || password.touched)) {
+          <p class="rerror-fedback">Password is required</p>
+          }
+        </div>
+        <div class="mb-3">
+          <input type="password" id="confirmPassword" class="form-control bg-body-secondary"
+            placeholder="ConfirmPassword" formControlName="confirmPassword" />
+          @if (form.controls['confirmPassword'].errors?.['minlength']) {
+          <span class="rerror-fedback">Min 6 char Needed</span>
+          }
+          @if(form.controls['confirmPassword'].value !== form.controls['password'].value){
+          <p class="rerror-fedback">Password Missmatch</p> }
+
+        </div>
+        <div class="mt-4">
+          <button type="submit" class="btn btn-success w-100 rounded-3" [disabled]="form.invalid">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--div class="container">
+  <div class="row hv-100 align-items-center">
+    <div class="rounded-4 border-0 shadow-lg bg-white">
+      <signupcomponent>
+
+      </signupcomponent>
+    </div>
+
+  </div>
+</div>
+
 <div class=" w-100 border border-secondary text-center topdiv">
    <div class="row fixed-top  bg-black text-white  h">
             <div class="container text-center ">
@@ -53,7 +188,7 @@
     </div>
   </div>
 
-  <router-outlet></router-outlet>
+  <router-outlet></router-outlet-->
 
 
 

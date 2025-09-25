@@ -22,7 +22,7 @@
                     <input 
                          formControlName="name"
                          class="tgl tgl-light tgl-primary"
-                         id="promotionMaterial"
+                         id="name"
                          type="text"
                          class="form-control border border-black ">   
 
@@ -58,7 +58,7 @@
                                    <span>This is Required</span>            
                               } 
                               @if (form.controls['password'].errors?.['minlength']) {
-                                   <span>Min 6 char  Needed</span>
+                                   <span class="rerror-fedback">Min 6 char  Needed</span>
                               }     
                          </div>
                          }
@@ -89,7 +89,7 @@
                   
                </div>
                   <div class="d-grid gap-2 col-6 mx-auto">
-                  <button class="btn btn-secondary border border-black" type="submit"   [disabled]="form.invalid">Submit</button>
+                  <button class="btn btn-secondary border border-black">Submit</button>
                   <p>Forgotten <a class="link-opacity-100-hover" routerLink="/reset">username</a> </p>
                </div>
                </div>               

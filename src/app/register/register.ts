@@ -1,7 +1,7 @@
 import {  FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Component, inject } from '@angular/core';
 import { PasswordValidators } from 'app/change-password/password.validators';
-import { RegisterPostData } from 'app/interface/auth';
+import { User } from 'app/interface/auth';
 import { AuthService } from 'app/services/auth-service';
 import { HttpClient } from '@angular/common/http';
 import { error } from 'console';
@@ -27,7 +27,7 @@ form = new FormGroup({
   password: new FormControl("", [Validators.required, Validators.minLength(6)]),
   confirmPassword: new FormControl("", [Validators.required, Validators.minLength(6)])
 });
-name: FormControl<any> | undefined;
+//form: FormControl<any> | undefined;
 
 
 
@@ -37,7 +37,7 @@ name: FormControl<any> | undefined;
 
   const postData = {...this.form.value};
   delete postData.confirmPassword;
-  this.userService.registerUser(postData as RegisterPostData).subscribe({
+  this.userService.registerUser(postData as User).subscribe({
     next: (response) => {
       console.log(response);
     },

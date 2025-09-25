@@ -1,50 +1,172 @@
-<div class=" w-100 border border-secondary text-center topdiv">
-   <div class="row fixed-top  bg-black text-white  h">
-            <div class="container text-center ">
+
+
+
+<div class="container">
+  
+
+<div class="row fixed-top  bg-black text-white h">
+            <div class="container text-center">
               <div class="row">
-                  <div class="col  mx-auto m-3 link">
-                     <div  class="col link" ><a class=" link"  routerLink="/home"><h5>LOGO</h5></a></div>
+                  <div class="col  mx-auto m-3">
+                     <div  class="col link" ><a class=" link"   routerLink="/home"><h4>LOGO</h4></a></div>
+                  </div>
+                  <div class="col-6">
+                      <div class="container text-center">
+                  <div class="row row-cols-auto  mx-auto m-3">
+                    <div class="col link" ><a class=" link"  routerLink="/home">Home</a></div>
+                    <!--div class="col link" ><a class=" link"  routerLink="/reset">Reset</a></div-->
+                    <div class="col link"><a class=" link" routerLink="/inprogress">Demo</a></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div> 
+                  </div>
+                </div>
+                  </div>
+                  <div class="col d-flex justify-content-end ">
+                    <ul class="list-group list-group-horizontal  d-flex justify-content-end  m-3  mx-auto div">
+                      <div class="col link"><a class=" link" routerLink="/login">Log in</a></div>
+                      <div class="spacebetweenloginandlogout"></div>
+                      <div  class="col link" ><a class=" link"  routerLink="/register">Sign up</a></div>
+                   </ul>
                   </div>
           </div>
       </div>
-</div>
-
-</div>
-
-  <div class="row colheight">
-    <div class="col d-flex align-items-center justify-content-center ">
-      <div class="fs-1 fw-bold">Accout Login</div>
-    </div>
-    <div class="col ">
-        <div class=" right-div  bg-dark-subtle rounded border border-black b">
-            <div class="m-3 left-div-inner  ">
-  <form >
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input 
-          type="email"
-          class="form-control border border-black" 
-          id="exampleInputEmail1" aria-describedby="emailHelp">
-               
-          </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input
-           type="password" 
-           class="form-control border border-black"
-           id="exampleInputPassword1"
-          >
       </div>
-    <div class="d-grid gap-2 col-6 mx-auto">
-      <button class="btn btn-secondary border border-black" type="button">Button</button>
-      <p>Forgotten <a class="link-opacity-100-hover" routerLink="/reset">username</a> or <a class="link-opacity-100-hover" routerLink="/reset"> password</a></p>
-    </div>
+ 
+ 
   
-</form>
-            </div>
-      </div>
-    </div>
-  </div>
+        <!--div class=" right-div  bg-dark-subtle rounded border border-black b">   
+          <form  [formGroup]="form" >
+               <div class="c  mx-auto h-auto">
+               <div>
+                    <label  for="name " >Name</label>
+                    <input 
+                         formControlName="name"
+                         class="tgl tgl-light tgl-primary"
+                         id="name"
+                         type="text"
+                         class="form-control border border-black ">   
+
+                         <div class="text-danger">
+                              @if (form.controls['name'].errors?.['required'] && form.controls['name'].touched) {
+                                   <span>This is Required</span>
+                              }     
+                         </div>
+               </div>
+               <div>
+                    <label  for="email " >email</label>
+                    <input 
+                         formControlName="email" 
+                         type="text" 
+                         id="email"
+                         class="form-control border border-black ">
+                           <div class="text-danger">
+                              @if (form.controls['email'].errors?.['required'] && form.controls['email'].touched) {
+                                   <span>This is Required</span>
+                              }     
+                         </div>
+               </div>
+               <div >
+                    <label  for="password " >Password</label>
+                    <input 
+                         formControlName="password" 
+                         type="password" 
+                         id="password"
+                         class="form-control border border-black ">  
+                         @if (form.controls['password'].touched) {
+                                <div class="text-danger">
+                              @if (form.controls['password'].errors?.['required']) {
+                                   <span>This is Required</span>            
+                              } 
+                              @if (form.controls['password'].errors?.['minlength']) {
+                                   <span class="rerror-fedback">Min 6 char  Needed</span>
+                              }     
+                         </div>
+                         }
+                         
+               </div>
+               <div class="mb-3 ">
+                    <label  for="confirmPassword " >Confirm Password</label>
+                    <input 
+                         formControlName="confirmPassword" 
+                         type="password" 
+                         id="confirmPassword"
+                         class="form-control border border-black ">
+                             @if (form.controls['confirmPassword'].touched) {
+                                <div class="text-danger">
+                              @if (form.controls['confirmPassword'].errors?.['required']) {
+                                   <span>This is Required</span>            
+                              } 
+                              @if (form.controls['confirmPassword'].errors?.['minlength']) {
+                                   <p class="password-required" >Min 6 char  Needed</p>
+                              }     
+                         </div>
+                         }
+                    
+                         <div>
+                              @if(form.controls['confirmPassword'].value !== form.controls['password'].value){
+                              <p class="password-required">Password Missmatch</p> }
+                         </div>
+                  
+               </div>
+                  <div class="d-grid gap-2 col-6 mx-auto">
+                  <button class="btn btn-secondary border border-black">Submit</button>
+                  <p>Forgotten <a class="link-opacity-100-hover" routerLink="/reset">username</a> </p>
+               </div>
+               </div>               
+          </form>
+
+   
+  </div-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
 
 
 

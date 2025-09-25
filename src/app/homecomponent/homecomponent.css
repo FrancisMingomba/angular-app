@@ -55,7 +55,7 @@
 .componentfourdivsize {
     height: 40px;;
 }
-.x {
+.spaceontopoffooter {
     height: 25px;
 }
 .y {
@@ -72,7 +72,7 @@
     height: 50px;
 }
 .loginandlogoutspace{
-    width: 50%; float:left; margin: 8px;
+    width: 100%; float:left; margin: 8px;
 }
 .k{
     display: flex;
@@ -95,4 +95,53 @@
     height: 100px;
     width: 100%;
 
+}
+.inprogress{
+    color:crimson;
+}
+
+.coll{
+ display: flex;
+ height: 150px;
+ 
+}
+.col1 {
+    display: flex;
+    width: 70%; 
+    margin: 1rem;
+    
+   
+}
+.box{
+    
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid lightgrey;
+    margin: 0.3rem;
+}
+.coll2 {
+    width: 30%;
+     position: fixed;
+}
+.o{
+   
+   justify-content: center;
+}
+.spaceontopoffooter {
+    text-align: center;
+}
+.itema-above-footer {
+    text-align: center;
+    background-color: #e7e7e7;
+    padding: 3px;
+    font-size: 16px;
+    color: #050d08;
+    border-top: 1px solid #ccc;
+}
+
+.in-progress {
+    color: crimson;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
 }

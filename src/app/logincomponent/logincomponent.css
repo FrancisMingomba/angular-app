@@ -28,3 +28,282 @@
 .b{
    box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sizeonee {
+    height: 420px;
+}
+
+.compomentone {
+    height: 500px;
+}
+
+
+.b:hover {
+   
+    box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px;
+    cursor: pointer;
+
+}
+
+.componentonesize {
+    height: 50px;
+}
+.compomenthree {
+    height: 500px;
+}
+.sizeone {
+    height: 450px;
+}
+
+.container {
+    display: grid;
+}
+.innercontainer {
+    display: flex;
+}
+
+.containere {
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    size: 100% 100%;
+
+}
+
+
+.container {
+    height: 20vh;
+}
+.containertwo{
+    height: 50hv;
+}
+.sizeone {
+  height: 350px;
+}
+
+.componentfourdivsize {
+    height: 40px;;
+}
+.spaceontopoffooter {
+    height: 25px;
+}
+.y {
+    height: 40px;
+}
+.t {
+    height: 2px;
+}
+.spacebetweenavbarandcomp1 {
+    height: 55px;
+}
+.navbarcolor {
+    background-color: #66abab;
+    height: 50px;
+}
+.loginandlogoutspace{
+    width: 100%; float:left; margin: 8px;
+}
+.k{
+    display: flex;
+    justify-content: space-between;
+}
+.spacebetweenloginandlogout {
+    width: 20px;
+}
+.h {
+    height: 55px;
+}
+.link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+ .div {
+      width: 150px;
+     }
+.contentdiv {
+    height: 100px;
+    width: 100%;
+
+}
+.inprogress{
+    color:crimson;
+}
+
+.coll{
+ display: flex;
+ height: 150px;
+ 
+}
+.col1 {
+    display: flex;
+    width: 70%; 
+    margin: 1rem;
+    
+   
+}
+.box{
+    
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid lightgrey;
+    margin: 0.3rem;
+}
+.coll2 {
+    width: 30%;
+     position: fixed;
+}
+.o{
+   
+   justify-content: center;
+}
+.spaceontopoffooter {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.topdiv {
+    height: 60px;
+}
+.right-div {
+    height: 500px;
+    width: 650px;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-bottom: 100px;
+    margin-top: 50px;
+    margin-right: 40px
+       
+
+}
+.left-div-inner {
+    height: 350px;
+    width: 530px;
+    padding-top: 50px;
+     padding-left: 40px;
+
+      margin-right: 50px
+}
+.link {
+  color: #FFFFFF;
+  text-decoration: none;
+   
+}
+.b{
+   box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px;
+   
+}
+.s{
+margin-bottom: 80px;
+}
+
+.c{
+  margin: 0px;
+  width: 50%;
+ 
+ 
+
+
+}
+.password-requirde, .password-required{
+  color: red;
+  font-size: 12px;
+}
