@@ -39,37 +39,40 @@
           <div class="mb-4 h2 text-success">
            Login 
           </div>
-          <form [formGroup]="form" >
+          <form [formGroup]="form"  (ngSubmit)="onLogin()">
+               <!--div @if(invalidLogin) class="alert alert-danger mt-2">
+                The username or password is incorrect.
+              </div-->
             <div class="mb-3">
               <input type="text" id="email" class="form-control bg-body-secondary" 
-              placeholder="Email" formControlName="email" 
-               />
-               @if (email.invalid && (email.dirty || email.touched)) {
-               <p class="rerror-fedback">Email is required</p>
+              placeholder="Email" formControlName="email" />
+              @if(form.controls['email'].invalid && (form.controls['email'].dirty || form.controls['email'].touched)){
+                <!--p class="alert alert-danger"></p-->
+              
+                <div class="alert alert-danger mt-2" *ngIf="form.controls['email'].errors?.['required']">
+                  Email is required.
+                </div>
+                <div class="alert alert-danger mt-2" *ngIf="form.controls['email'].errors?.['email']">
+                  Invalid email format.
+                </div>
               }
             </div>
+          
             <div class="mb-3">
               <input type="password" id="password" class="form-control bg-body-secondary" 
-              placeholder="Password" formControlName="password" 
-              />
-               @if (password.invalid && (password.dirty || password.touched)) {
-              <p class="rerror-fedback">Password is required</p>
-              }
+              placeholder="Password" formControlName="password" />
             </div>
-              
             
             <div class="mt-4">
               <button type="submit" class="btn btn-success w-100 rounded-3" [disabled]="form.invalid">Login</button>
-              </div>
-              <div>
+            </div>
+              
                 <div class="">
                     <p routerLink="/reset" >Forgotten <span class="forgottenpassword">Username</span> / <span class="forgottenpassword">password</span></p>
                 </div>
-               
-              </div>
-          </form>
-          </div>
-          </div>
+                
+          <form>
+          
   
 
 <router-outlet></router-outlet>

@@ -43,21 +43,20 @@ export class Create {
   onSignup(){
     this.AuthService.register(this.form.value).subscribe(res=>{
       alert('User Registered Successfully');
-      this.router.navigate(['/signin']);
+      this.router.navigate(['/']);
     },
     err=>{
       alert('Something went wrong');
     }
     );
-    debugger
+    
 
     
   }
 
 
 
-
-
+ 
 
 
 

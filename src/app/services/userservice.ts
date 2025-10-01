@@ -12,8 +12,8 @@ import { User } from '../interface/auth';
   providedIn: 'root'
 })
 export class Userservice {
-//private baseUrl = 'https://angularbackend-production.up.railway.app';
-   private baseUrl = 'http://localhost:9090';
+private baseUrl = 'https://angularbackend-production.up.railway.app';
+  // private baseUrl = 'http://localhost:9090';
 
 
   constructor(private http: HttpClient) { }
